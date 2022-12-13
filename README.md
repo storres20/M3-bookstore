@@ -51,6 +51,9 @@
   <ul>
     <li><a href="https://reactjs.org/">React.js</a></li>
   </ul>
+  <ul>
+    <li><a href="https://github.com/erikras/ducks-modular-redux">Redux ducks pattern</a></li>
+  </ul>
 </details>
 
 <!-- Features -->
@@ -60,6 +63,7 @@
 - **[React js]**
 - **[Components]**
 - **[CSS]**
+- **[REDUX]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -67,7 +71,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](...)
+- [Live Demo Link](https://bookstore-6fez.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -152,6 +156,7 @@ You can deploy this project using:
 
 - [ ] **[Class and function components]**
 - [ ] **[React js]**
+- [ ] **[Redux]**
 - [ ] **[Linters]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
