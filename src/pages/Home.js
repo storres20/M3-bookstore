@@ -1,9 +1,17 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Book from '../components/Book';
 import Form from '../components/Form';
+import { getBook } from '../redux/books/books';
 
 function Home() {
+  /* Setup Redux dispatch */
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getBook());
+  }, [dispatch]);
+
   /* Load Redux State */
   const book = useSelector((state) => state.book);
   return (
@@ -11,7 +19,7 @@ function Home() {
       {/* Render Redux State */}
       {
         book.map((item) => (
-          <Book key={item.id} title={item.title} author={item.author} id={item.id} />
+          <Book key={item.item_id} title={item.title} author={item.author} id={item.item_id} />
         ))
       }
 
