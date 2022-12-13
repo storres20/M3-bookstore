@@ -1,11 +1,29 @@
 // books.js
 
+const initialBooks = [
+  {
+    id: '1',
+    title: 'The Hunger Games',
+    author: 'Suzanne Collins',
+  },
+  {
+    id: '2',
+    title: 'Dune',
+    author: 'Frank Herbert',
+  },
+  {
+    id: '3',
+    title: 'Capital in the Twenty-First Century',
+    author: 'Suzanne Collins',
+  },
+];
+
 // Actions... types
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
 // Reducer
-export default function reducer(state = [], action) {
+export default function reducer(state = initialBooks, action) {
   switch (action.type) {
     // do reducer stuff
     case ADD_BOOK:
