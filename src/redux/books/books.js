@@ -44,7 +44,7 @@ export const addBook = createAsyncThunk(ADD_BOOK, async (obj) => {
       body: JSON.stringify(obj),
     });
   return obj;
-});
+}); /* addBook - createAsyncThunk - API */
 
 export const removeBook = createAsyncThunk(REMOVE_BOOK, async (id) => {
   const removeBookUrl = `${url + appId}/books/${id}`;
@@ -57,7 +57,7 @@ export const removeBook = createAsyncThunk(REMOVE_BOOK, async (id) => {
       body: JSON.stringify({ item_id: id }),
     });
   return id;
-});
+}); /* removeBook - createAsyncThunk - API */
 
 export const getBook = createAsyncThunk(GET_BOOK, async () => {
   const getBookUrl = `${url + appId}/books`;
@@ -70,4 +70,4 @@ export const getBook = createAsyncThunk(GET_BOOK, async () => {
     });
   const result = await response.json();
   return result;
-});
+}); /* getBook - createAsyncThunk - API */

@@ -29,7 +29,7 @@ function Form() {
       ...newBook,
       item_id: uuidv4(),
       category: 'book',
-    }));
+    })); /* keys: item_id, title, author, category  */
     setNewBook(initial); /* Reset input's value */
   };
 
