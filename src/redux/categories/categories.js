@@ -1,7 +1,7 @@
 // categories.js
 
 // Actions
-const CHECKING_STATUS = 'CHECKING_STATUS';
+const CHECKING_STATUS = 'bookstore/categories/CHECK_STATUS';
 
 // Reducer
 export default function reducer(state = [], action) {
