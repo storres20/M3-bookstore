@@ -4,11 +4,12 @@ import { v4 as uuidv4 } from 'uuid'; /* Generate a random ID */
 import { addBook } from '../redux/books/books';
 
 function Form() {
-  /* Setup useState */
-  const [newBook, setNewBook] = useState({
+  const initial = {
     author: '',
     title: '',
-  });
+  };
+  /* Setup useState */
+  const [newBook, setNewBook] = useState(initial);
 
   /* Catch input's new data into "newBook" state */
   const handleChange = (e) => {
@@ -26,18 +27,20 @@ function Form() {
     e.preventDefault();
     dispatch(addBook({
       ...newBook,
-      id: uuidv4(),
+      item_id: uuidv4(),
+      category: 'book',
     }));
+    setNewBook(initial); /* Reset input's value */
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="title">
-        <input name="title" placeholder="Book title" onChange={handleChange} />
+        <input name="title" placeholder="Book title" onChange={handleChange} value={newBook.title} required autoComplete="off" />
       </label>
 
       <label htmlFor="author">
-        <input name="author" placeholder="Book author" onChange={handleChange} />
+        <input name="author" placeholder="Book author" onChange={handleChange} value={newBook.author} required autoComplete="off" />
       </label>
 
       <button type="submit">ADD BOOK</button>
