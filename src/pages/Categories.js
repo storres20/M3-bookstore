@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { checkingStatus } from '../redux/categories/categories';
+import './Categories.css';
 
 function Categories() {
   /* Setup Redux dispatch */
@@ -16,7 +17,7 @@ function Categories() {
 
   return (
     <div>
-      <button type="button" onClick={handleStatus}>Check status</button>
+      <button className="primary-button" type="button" onClick={handleStatus}>Check status</button>
       <h2>{status}</h2>
     </div>
   );
