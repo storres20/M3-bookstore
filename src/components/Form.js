@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid'; /* Generate a random ID */
 import { addBook } from '../redux/books/books';
+import './Form.css';
 
 function Form() {
   const initial = {
@@ -34,17 +35,23 @@ function Form() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="title">
-        <input name="title" placeholder="Book title" onChange={handleChange} value={newBook.title} required autoComplete="off" />
-      </label>
+    <>
+      <h2 className="form-title">ADD NEW BOOK</h2>
+      <form className="add-form" onSubmit={handleSubmit}>
+        <input className="input title-input" name="title" placeholder="Book title" onChange={handleChange} value={newBook.title} required autoComplete="off" />
 
-      <label htmlFor="author">
-        <input name="author" placeholder="Book author" onChange={handleChange} value={newBook.author} required autoComplete="off" />
-      </label>
+        <input className="input title-input" name="author" placeholder="Book author" onChange={handleChange} value={newBook.author} required autoComplete="off" />
 
-      <button type="submit">ADD BOOK</button>
-    </form>
+        <select className="input category-input">
+          <option value="Action">Action</option>
+          <option value="Science Fiction">Science Fiction</option>
+          <option value="Economy">Economy</option>
+          <option value="Economy">Drama</option>
+        </select>
+
+        <button className="primary-button-big" type="submit">ADD BOOK</button>
+      </form>
+    </>
   );
 }
 
