@@ -6,7 +6,7 @@ import Categories from './pages/Categories';
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Navbar />
 
       <Routes>

@@ -1,0 +1,20 @@
+.homeContainer {
+  padding: 4%;
+  background-color: #fafafa;
+
+  /* box-shadow: 0 0 60px 0 rgb(0 0 0 / 5%); */
+}
+
+.homeBook {
+  display: flex;
+  flex-direction: column;
+  gap: 0.938rem;
+}
+
+/* Horizontal divider */
+.horizontal-divider {
+  height: 0.125rem;
+  background-color: #e8e8e8;
+  width: 100%;
+  margin: 2.5rem 0 1.813rem;
+}
